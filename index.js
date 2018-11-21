@@ -99,8 +99,8 @@ class WebTorrent extends EventEmitter {
     }
 
     this.throttleGroups = {
-      down: new ThrottleGroup({rate: this.downloadLimit}),
-      up: new ThrottleGroup({rate: this.uploadLimit})
+      down: new ThrottleGroup({ rate: this.downloadLimit }),
+      up: new ThrottleGroup({ rate: this.uploadLimit })
     }
 
     if (typeof TCPPool === 'function') {
